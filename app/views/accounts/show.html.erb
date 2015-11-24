@@ -22,3 +22,4 @@
 </div>
 
 <div><%= button_to "Edit", edit_account_path(@account), method: :get, class: "btn btn-default" %></div>
+<%= button_to "Delete", "/accounts/#{@account.id}", method: :delete, class: "btn btn-default" %>
