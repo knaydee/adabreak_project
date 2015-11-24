@@ -1,8 +1,9 @@
-<div class="new-account-form">
+<div class="account-form">
 
 <%= bootstrap_form_for @account, class: "form-group", url:({action: "#{@action}"}) do |f| %>
 <%= f.text_field :name%>
 <%= f.text_field :user_login%>
 <%= f.submit class: "submit", class: "btn btn-default" %>
 <% end %>
+
 </div>

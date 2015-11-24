@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+ .account-form {
+  width: 300px;
+}
+
+.table {
+  width: 400px;
+}
+
+.table_headers {
+  font-weight: bold;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+.button_to {
+  display: inline;
+}
