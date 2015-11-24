@@ -2,7 +2,7 @@
 <ul>
     <% @accounts.each do |account| %>
     <li>
-      <%= account.name %>
+      <%= link_to account.name, account_path(account.id)%>
     </li>
     <% end %>
 </ul>

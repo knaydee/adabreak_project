@@ -8,4 +8,10 @@ class AccountsController < ApplicationController
     @accounts = Account.all
     @title = "My Accounts"
   end
+
+  def show
+    id = params[:id]
+    @account = Account.find(id)
+    @title = "#{@account.name} Info"  
+  end
 end
