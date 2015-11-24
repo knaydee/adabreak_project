@@ -12,6 +12,12 @@ class AccountsController < ApplicationController
   def show
     id = params[:id]
     @account = Account.find(id)
-    @title = "#{@account.name} Info"  
+    @title = "#{@account.name} Info"
+  end
+
+  def new
+    @account = Account.new()
+    @action = "create"
+    @title = "Add an Account"
   end
 end
