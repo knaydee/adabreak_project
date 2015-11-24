@@ -26,6 +26,13 @@ class AccountsController < ApplicationController
     redirect_to "/accounts"
   end
 
+  def edit
+    id = params[:id]
+    @account = Account.find(id)
+    @action = "update"
+    @title = "Edit an Account"
+  end
+
   private
 
   def account_params
