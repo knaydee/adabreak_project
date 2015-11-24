@@ -39,6 +39,12 @@ class AccountsController < ApplicationController
     redirect_to "/accounts/#{id}"
   end
 
+  def destroy
+    id = params[:id]
+    Account.destroy(id)
+    redirect_to accounts_path
+  end
+
   private
 
   def account_params
