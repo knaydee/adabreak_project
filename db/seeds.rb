@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+account = [
+  {name: "ebay", user_login: ""},
+  {name: "Amazon", user_login: ""},
+  {name: "Craigslist", user_login: ""},
+]
+
+account.each do |seed|
+  Account.create(seed)
+end
