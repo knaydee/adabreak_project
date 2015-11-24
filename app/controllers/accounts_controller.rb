@@ -33,6 +33,12 @@ class AccountsController < ApplicationController
     @title = "Edit an Account"
   end
 
+  def update
+    id = params[:id]
+    Account.update(id, account_params[:account])
+    redirect_to "/accounts/#{id}"
+  end
+
   private
 
   def account_params
