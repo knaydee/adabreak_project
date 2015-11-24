@@ -20,4 +20,15 @@ class AccountsController < ApplicationController
     @action = "create"
     @title = "Add an Account"
   end
+
+  def create
+    Account.create(account_params[:account])
+    redirect_to "/accounts"
+  end
+
+  private
+
+  def account_params
+    params.permit(account:[:name, :user_login])
+  end
 end
