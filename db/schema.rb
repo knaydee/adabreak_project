@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124173225) do
+ActiveRecord::Schema.define(version: 20151125232742) do
 
-  create_table "accounts", force: :cascade do |t|
+  create_table "giftees", force: :cascade do |t|
     t.string   "name"
-    t.string   "user_login"
+    t.integer  "age"
+    t.string   "likes"
+    t.string   "dislikes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

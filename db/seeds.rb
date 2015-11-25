@@ -6,12 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-account = [
-  {name: "ebay", user_login: ""},
-  {name: "Amazon", user_login: ""},
-  {name: "Craigslist", user_login: ""},
+giftee = [
+  {name: "Cortney", age: 35, likes: "", dislikes: ""},
+  {name: "Lauri", age: 62, likes: "", dislikes: ""},
+  {name: "Meighan", age: 37, likes: "", dislikes: ""},
 ]
 
-account.each do |seed|
-  Account.create(seed)
+giftee.each do |seed|
+  Giftee.create(seed)
 end

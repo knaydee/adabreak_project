@@ -36,8 +36,9 @@ html {
   text-align: center;
 }
 
-.account-form {
+.giftee-form {
   width: 300px;
+  margin: auto;
 }
 
 .table {
@@ -71,10 +72,6 @@ html {
   display: inline-block;
 }
 
-.account-list {
+.giftee-list {
   padding-bottom: 10px;
-}
-
-.account-form {
-  margin: auto;
 }

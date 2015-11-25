@@ -1,0 +1,7 @@
+<h1><%= @title %></h1>
+<section class="giftee-list">
+  <% @giftees.each do |giftee| %>
+    <h4><%= link_to giftee.name, giftee_path(giftee.id), method: :get%></h4>
+  <% end %>
+</section>
+<%= button_to "Add New Giftee", new_giftee_path, method: :get, class: "btn btn-default" %>
