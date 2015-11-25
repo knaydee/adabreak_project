@@ -25,11 +25,13 @@ h1 {
 }
 
 .body {
-  background-color: #D6FAF0;
+  background-image: url('/assets/background.jpg');
   background-repeat: no-repeat;
   background-size: 950px, 950px;
   background-attachment: fixed;
   color: black;
+  background-position: center;
+  margin-top: 100px;
 }
 
 html {
