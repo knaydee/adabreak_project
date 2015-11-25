@@ -6,7 +6,7 @@ class AccountsController < ApplicationController
 
   def index
     @accounts = Account.all
-    @title = "My Accounts"
+    @title = "My Seller Accounts"
   end
 
   def show

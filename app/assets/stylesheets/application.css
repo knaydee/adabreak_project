@@ -14,28 +14,67 @@
  *= require_self
  */
 
-body {
-  background-image: url('/assets/background.png');
+
+ * {
+   font-family: Indie Flower, cursive;
+   color: #405421;
+ }
+
+h1 {
+  font-family: Indie Flower, cursive;
+}
+
+.body {
+  background-color: #D6FAF0;
   background-repeat: no-repeat;
   background-size: 950px, 950px;
   background-attachment: fixed;
- }
- .account-form {
+  color: black;
+}
+
+html {
+  text-align: center;
+}
+
+.account-form {
   width: 300px;
 }
 
 .table {
   width: 400px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.table_headers {
+.table-headers {
   font-weight: bold;
+  color: black;
 }
 
+.table-hover tbody tr:hover td {
+    background: #B9E7DA;
+}
 .btn {
+  margin-top: 10px;
   margin-bottom: 10px;
+  background-color: #95D1C5;
+  display: block;
+  margin: auto;
+
+}
+
+.btn:hover {
+  background-color: #B9E7DA;
 }
 
 .button_to {
-  display: inline;
+  display: inline-block;
+}
+
+.account-list {
+  padding-bottom: 10px;
+}
+
+.account-form {
+  margin: auto;
 }

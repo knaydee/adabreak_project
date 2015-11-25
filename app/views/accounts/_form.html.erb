@@ -1,5 +1,6 @@
 <div class="account-form">
 
+<h1><%= @title %></h1>
 <%= bootstrap_form_for @account, class: "form-group", url:({action: "#{@action}"}) do |f| %>
 <%= f.text_field :name%>
 <%= f.text_field :user_login%>
