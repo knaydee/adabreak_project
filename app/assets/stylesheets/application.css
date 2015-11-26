@@ -107,3 +107,13 @@ th {
   text-align: center;
   font-size: 18px;
 }
+
+#wishlist_bought {
+  margin-left: 75px;
+  color: black;
+}
+
+.checkbox {
+  color: black;
+  font-size: 18px;
+}
