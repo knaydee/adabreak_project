@@ -11,7 +11,7 @@
     <% @wishlist.each do |wishlist| %>
       <tr>
         <td><%= wishlist.item %></td>
-        <td><%= wishlist.price %></td>
+        <td><%= number_to_currency(wishlist.price/100.0) %></td>
         <td><%= wishlist.bought %></td>
       </tr>
     <% end %>
