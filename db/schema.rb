@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125232742) do
+ActiveRecord::Schema.define(version: 20151126012644) do
 
   create_table "giftees", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20151125232742) do
     t.string   "dislikes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.string   "item"
+    t.integer  "price"
+    t.boolean  "bought"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "giftee_id"
   end
 
 end

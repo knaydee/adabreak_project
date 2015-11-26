@@ -15,3 +15,16 @@ giftee = [
 giftee.each do |seed|
   Giftee.create(seed)
 end
+
+wishlist = [
+  {item: "perfume", price: 5000, bought: false, giftee_id: 1},
+  {item: "puppy", price: 150000, bought: false, giftee_id: 3},
+  {item: "scarf", price: 2000, bought: false, giftee_id: 2},
+  {item: "purse", price: 10000, bought: false, giftee_id: 1},
+  {item: "kitty", price: 11500, bought: false, giftee_id: 2},
+  {item: "gift card", price: 7500, bought: false, giftee_id: 3},
+]
+
+wishlist.each do |seed|
+  Wishlist.create(seed)
+end
