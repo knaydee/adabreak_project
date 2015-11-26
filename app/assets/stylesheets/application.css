@@ -29,7 +29,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: 950px, 950px;
   background-attachment: fixed;
-  color: black;
+  color: white;
   background-position: center;
   margin-top: 100px;
 }
@@ -41,6 +41,7 @@ html {
 .giftee-form {
   width: 300px;
   margin: auto;
+  color: white;
 }
 
 .table {
@@ -51,12 +52,16 @@ html {
 
 .table-headers {
   font-weight: bold;
-  color: black;
+}
+
+td {
+  color: white;
 }
 
 .table-hover tbody tr:hover td {
     background: #B9E7DA;
 }
+
 .btn {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -76,4 +81,12 @@ html {
 
 .giftee-list {
   padding-bottom: 10px;
+}
+
+a {
+  color: green;
+}
+
+.control-label {
+  color: white;
 }
