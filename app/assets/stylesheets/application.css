@@ -40,7 +40,12 @@ html {
 .giftee-form {
   width: 300px;
   margin: auto;
+  margin-top: -40px;
   color: white;
+}
+
+.form-group {
+  vertical-align: middle;
 }
 
 .table {
