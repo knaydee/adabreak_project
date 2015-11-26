@@ -17,7 +17,6 @@
 
  * {
    font-family: Indie Flower, cursive;
-   color: #405421;
  }
 
 h1 {
@@ -59,20 +58,21 @@ td {
 }
 
 .table-hover tbody tr:hover td {
-    background: #B9E7DA;
+    background: #006400;
 }
 
 .btn {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #95D1C5;
+  background-color: #006400;
   display: block;
   margin: auto;
+  color: black;
 
 }
 
 .btn:hover {
-  background-color: #B9E7DA;
+  background-color: #95D1C5;
 }
 
 .button_to {
@@ -84,9 +84,10 @@ td {
 }
 
 a {
-  color: green;
+  color: black;
 }
 
 .control-label {
-  color: white;
+  color: black;
+  font-size: 16px;
 }
