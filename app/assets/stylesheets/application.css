@@ -37,7 +37,7 @@ html {
   text-align: center;
 }
 
-.giftee-form {
+.giftee-form, .wishlist-form {
   width: 300px;
   margin: auto;
   margin-top: -40px;

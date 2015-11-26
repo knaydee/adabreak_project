@@ -12,8 +12,16 @@
       <tr>
         <td><%= wishlist.item %></td>
         <td><%= number_to_currency(wishlist.price/100.0) %></td>
-        <td><%= wishlist.bought %></td>
+        <td>
+          <% if wishlist.bought == false %>
+            No
+          <% else %>
+            Yes
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<%= button_to "Add New Item", new_giftee_wishlist_path, method: :get, class: "btn btn-default" %>
