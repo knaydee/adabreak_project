@@ -37,5 +37,6 @@
 </table>
 </div>
 
+<%= link_to "View Wishlist", "/giftees/#{@giftee.id}/wishlists", role: "button", class: "btn btn-default" %>
 <%= button_to "Edit", edit_giftee_path(@giftee), method: :get, class: "btn btn-default" %>
 <%= button_to "Delete", "/giftees/#{@giftee.id}", method: :delete, class: "btn btn-default" %>

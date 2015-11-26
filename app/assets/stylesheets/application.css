@@ -73,7 +73,7 @@ td {
   display: block;
   margin: auto;
   color: black;
-
+  width: 100px;
 }
 
 .btn:hover {
@@ -84,12 +84,17 @@ td {
   display: inline-block;
 }
 
+
 .giftee-list {
   padding-bottom: 10px;
 }
 
 a {
   color: black;
+}
+
+a.btn {
+  margin-bottom: 10px;
 }
 
 .control-label {
