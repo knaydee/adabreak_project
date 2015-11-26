@@ -13,7 +13,6 @@ class GifteesController < ApplicationController
     id = params[:id]
     @giftee = Giftee.find(id)
     @title = "#{@giftee.name}'s Info"
-    @wishlist = @giftee.wishlists
   end
 
   def new

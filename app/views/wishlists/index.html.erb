@@ -1,7 +1,19 @@
-<ul>
-  <% @wishlist.each do |item| %>
-  <li>
-    <%= item.item %>
-  </li>
-  <% end %>
-</ul>
+<h1><%= @title %></h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Bought?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wishlist.each do |wishlist| %>
+      <tr>
+        <td><%= wishlist.item %></td>
+        <td><%= wishlist.price %></td>
+        <td><%= wishlist.bought %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
