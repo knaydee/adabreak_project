@@ -4,14 +4,14 @@ class WishlistsController < ApplicationController
     id = params[:giftee_id]
     @giftee = Giftee.find(id)
     @title = "#{@giftee.name}'s Wishlist"
-    @wishlist = @giftee.wishlists
+    @wishlists = @giftee.wishlists
   end
 
   def show
     id = params[:giftee_id]
     @giftee = Giftee.find(id)
     @title = "Market Vendors"
-    @wishlist = @giftee.wishlists
+    @wishlists = @giftee.wishlists
   end
 
   def new
@@ -29,22 +29,24 @@ class WishlistsController < ApplicationController
   end
 
   def edit
+    id = params[:id]
     @giftee = Giftee.find(id)
     @action = "update"
     @title = "Edit an Item"
-    @wishlist = @giftee.wishlists
+    @wishlists = @giftee.wishlists
+    @wishlist = Wishlist.find(id)
   end
 
   def update
     id = params[:id]
     Wishlist.update(id, wishlist_params[:wishlist])
-    redirect_to "/wishlists/#{id}"
+    redirect_to giftee_wishlists_path
   end
 
   def destroy
     id = params[:id]
     Wishlist.destroy(id)
-    redirect_to wishlists_path
+    redirect_to giftee_wishlists_path
   end
 
   private

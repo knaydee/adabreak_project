@@ -8,16 +8,28 @@
     </tr>
   </thead>
   <tbody>
-    <% @wishlist.each do |wishlist| %>
+    <% @wishlists.each do |wishlist| %>
       <tr>
         <td><%= wishlist.item %></td>
-        <td><%= number_to_currency(wishlist.price/100.0) %></td>
+        <td>
+          <% if wishlist.price != nil %>
+            <%= number_to_currency(wishlist.price/100.0) %>
+          <% else %>
+            -
+          <% end %>
+          </td>
         <td>
           <% if wishlist.bought == false %>
             No
           <% else %>
             Yes
           <% end %>
+        </td>
+        <td>
+          <%= button_to "Edit", { action: "edit", id: wishlist.id }, method: :get, class: "btn btn-default" %>
+        </td>
+        <td>
+          <%= button_to "Delete?", { action: "destroy", id: wishlist.id }, method: :delete, data: { confirm: "Last chance...you sure?" }, class: "btn btn-default" %>
         </td>
       </tr>
     <% end %>
