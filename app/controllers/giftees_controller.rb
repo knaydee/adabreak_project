@@ -22,7 +22,7 @@ class GifteesController < ApplicationController
   end
 
   def create
-    Giftee.create(account_params[:giftee])
+    Giftee.create(giftee_params[:giftee])
     redirect_to "/giftees"
   end
 
@@ -35,7 +35,7 @@ class GifteesController < ApplicationController
 
   def update
     id = params[:id]
-    Giftee.update(id, account_params[:giftee])
+    Giftee.update(id, giftee_params[:giftee])
     redirect_to "/giftees/#{id}"
   end
 
@@ -47,7 +47,7 @@ class GifteesController < ApplicationController
 
   private
 
-  def account_params
+  def giftee_params
     params.permit(giftee:[:name, :age, :likes, :dislikes])
   end
 end

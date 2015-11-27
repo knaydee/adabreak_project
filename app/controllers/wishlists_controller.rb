@@ -15,18 +15,20 @@ class WishlistsController < ApplicationController
   end
 
   def new
-    @wishlist = Wishlist.new()
+    @wishlist = Wishlist.new(wishlist_params[:wishlist])
     @action = "create"
     @title = "Add Item"
   end
 
   def create
-    Wishlist.create(account_params[:wishlist])
-    redirect_to "/wishlists"
+    @giftee_id = params[:giftee_id]
+    new_params = wishlist_params[:wishlist]
+    new_params[:giftee_id] = @giftee_id
+    Wishlist.create(new_params)
+    redirect_to giftee_wishlists_path
   end
 
   def edit
-    id = params[:giftee_id]
     @giftee = Giftee.find(id)
     @action = "update"
     @title = "Edit an Item"
@@ -35,7 +37,7 @@ class WishlistsController < ApplicationController
 
   def update
     id = params[:id]
-    Wishlist.update(id, account_params[:wishlist])
+    Wishlist.update(id, wishlist_params[:wishlist])
     redirect_to "/wishlists/#{id}"
   end
 
@@ -47,8 +49,8 @@ class WishlistsController < ApplicationController
 
   private
 
-  def account_params
-    params.permit(wishtlist:[:item, :price, :bought])
+  def wishlist_params
+    params.permit(wishlist:[:item, :price, :bought])
   end
 
 end
