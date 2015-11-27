@@ -13,7 +13,7 @@
         <td><%= wishlist.item %></td>
         <td>
           <% if wishlist.price != nil %>
-            <%= number_to_currency(wishlist.price/100.0) %>
+            <%= number_to_currency(wishlist.price) %>
           <% else %>
             -
           <% end %>
