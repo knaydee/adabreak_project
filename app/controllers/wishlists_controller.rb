@@ -29,12 +29,10 @@ class WishlistsController < ApplicationController
   end
 
   def edit
-    id = params[:id]
-    @giftee = Giftee.find(id)
+    wishlist_id = params[:id]
+    @wishlist = Wishlist.find(wishlist_id)
     @action = "update"
     @title = "Edit an Item"
-    @wishlists = @giftee.wishlists
-    @wishlist = Wishlist.find(id)
   end
 
   def update

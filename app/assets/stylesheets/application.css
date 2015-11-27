@@ -117,3 +117,12 @@ th {
   color: black;
   font-size: 18px;
 }
+
+nav {
+  margin-top: 50px;
+  color: white;
+}
+
+.home {
+  color: white;
+}
