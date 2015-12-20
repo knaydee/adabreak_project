@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug'
   gem 'simplecov'
   gem 'hirb'
+  gem 'rspec-rails'
 end
 
 group :production do
