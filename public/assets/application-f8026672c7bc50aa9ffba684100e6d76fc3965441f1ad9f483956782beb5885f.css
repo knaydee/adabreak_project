@@ -1,0 +1,133 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+
+ * {
+   font-family: Indie Flower, cursive;
+ }
+
+h1 {
+  font-family: Indie Flower, cursive;
+}
+
+body {
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 950px, 950px;
+  background-attachment: fixed;
+  color: white;
+  background-position: center;
+  margin-top: 100px;
+}
+
+html {
+  text-align: center;
+}
+
+.giftee-form, .wishlist-form {
+  width: 300px;
+  margin: auto;
+  margin-top: -40px;
+  color: white;
+}
+
+.form-group {
+  vertical-align: middle;
+}
+
+.table {
+  width: 400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.table-headers {
+  font-weight: bold;
+}
+
+td {
+  color: white;
+}
+
+.table-hover tbody tr:hover td {
+    background: #006400;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #006400;
+  display: block;
+  margin: auto;
+  color: black;
+  width: 150px;
+}
+
+.btn:hover {
+  background-color: #95D1C5;
+}
+
+.button_to {
+  display: inline-block;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.giftee-list {
+  padding-bottom: 10px;
+}
+
+a {
+  color: black;
+}
+
+a.btn {
+  margin-bottom: 10px;
+}
+
+.control-label {
+  color: black;
+  font-size: 16px;
+}
+
+th {
+  text-align: center;
+  font-size: 18px;
+}
+
+#wishlist_bought {
+  margin-left: 75px;
+  color: black;
+}
+
+.checkbox {
+  color: black;
+  font-size: 18px;
+}
+
+nav {
+  margin-top: 50px;
+  color: white;
+}
+
+.home {
+  color: white;
+}
