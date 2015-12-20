@@ -1,6 +1,6 @@
-[Heroku Link](https://giftee.herokuapp.com/)
 
-# Giftees
+
+# [Giftees](https://giftee.herokuapp.com/)
 
 The first break project for Ada Developers Academy, cohort 4 was to develop a Rails application. This application required that the following guidelines be met:
   - At least two models that have some sort of relationship to one another
