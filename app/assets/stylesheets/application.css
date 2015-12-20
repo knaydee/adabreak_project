@@ -28,7 +28,7 @@ h1 {
 }
 
 body {
-  background-image: url('/assets/background.jpg');
+  background-image: image-url('/assets/background.jpg');
   background-repeat: no-repeat;
   background-size: 950px, 950px;
   background-attachment: fixed;
