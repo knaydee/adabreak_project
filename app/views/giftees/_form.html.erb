@@ -1,7 +1,7 @@
 <div class="giftee-form">
 <h1><%= @title %></h1>
 
-<%= form_for @giftee, class: "form-group", url:({action: @action}) do |f| %>
+<%= bootstrap_form_for @giftee, class: "form-group", url:({action: @action}) do |f| %>
 <%= f.text_field :name%>
 <%= f.text_field :age%>
 <%= f.text_field :likes%>
