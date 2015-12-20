@@ -1,7 +1,7 @@
 <div class="wishlist-form">
 <h1><%= @title %></h1>
 
-<%= bootstrap_form_for @wishlist, class: "form-group", url:({action: @action}) do |f| %>
+<%= form_for @wishlist, class: "form-group", url:({action: @action}) do |f| %>
 <%= f.text_field :item %>
 <%= f.number_field :price, :class => 'text_field', :step => 'any' %>
 <%= f.check_box :bought, label: "Bought?", :class => "bought" %>
