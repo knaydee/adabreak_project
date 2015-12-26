@@ -27,15 +27,16 @@ h1 {
   font-family: Indie Flower, cursive;
 }
 
-/*body {
-  background-image: url("background.jpg");
+body {
+  /*background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: 950px, 950px;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
   color: white;
-  background-position: center;
+  /*background-position: center;*/
   margin-top: 100px;
-}*/
+  background: none;
+}
 
 html {
   text-align: center;
