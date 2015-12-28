@@ -28,17 +28,23 @@ h1 {
 }
 
 body {
-  background-image: url("background.jpg");
+  /*background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: 950px, 950px;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
   color: white;
-  background-position: center;
+  /*background-position: center;*/
   margin-top: 100px;
+  background: none;
 }
 
 html {
   text-align: center;
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .giftee-form, .wishlist-form {
