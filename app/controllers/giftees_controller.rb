@@ -23,7 +23,7 @@ class GifteesController < ApplicationController
 
   def create
     Giftee.create(giftee_params[:giftee])
-    redirect_to "/giftees"
+    redirect_to giftees_path
   end
 
   def edit
@@ -36,7 +36,7 @@ class GifteesController < ApplicationController
   def update
     id = params[:id]
     Giftee.update(id, giftee_params[:giftee])
-    redirect_to "/giftees/#{id}"
+    redirect_to giftee_path(id)
   end
 
   def destroy
