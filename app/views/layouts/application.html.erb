@@ -11,8 +11,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<%= yield %>
-<nav>
-  <a href="/" class="home">Return to Giftees</a>
-</nav>
+<body>
+  <% if !flash.empty? %>
+    <div class="flash">
+      <% flash.each do |key, value| %><%= value %>
+      <% end %>
+    </div>
+  <% end %>
+  <%= yield %>
+  <nav>
+    <a href="/" class="home">Return to Giftees</a>
+  </nav>
+</body>
 </html>
