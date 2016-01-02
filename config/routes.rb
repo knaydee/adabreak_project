@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'giftees#index'
+  root 'welcome#index'
 
   resources :giftees do
     resources :wishlists
