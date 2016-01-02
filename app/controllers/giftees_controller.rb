@@ -6,19 +6,20 @@ class GifteesController < ApplicationController
 
   def index
     @giftees = Giftee.all
-    @title = "My Giftees"
+    @title = "Giftee Profiles"
   end
 
   def show
     id = params[:id]
     @giftee = Giftee.find(id)
     @title = "#{@giftee.name}'s Info"
+    @name = @giftee.name
   end
 
   def new
     @giftee = Giftee.new()
     @action = "create"
-    @title = "Add Giftee"
+    @title = "Add a New Giftee"
   end
 
   def create
