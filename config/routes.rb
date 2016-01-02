@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'sessions/new' => 'sessions#new', as: :login
+  get '/sessions/new' => 'sessions#new', as: :login
+  delete '/logout' => 'sessions#destroy', as: :logout
+  get '/users/new' => 'users#new', as: :signup
 
 
 
