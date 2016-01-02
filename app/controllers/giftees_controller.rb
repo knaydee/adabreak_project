@@ -1,11 +1,10 @@
 class GifteesController < ApplicationController
+  before_action :only_owner, only: [:edit, :update, :show, :destroy]
+  before_action :require_login, only: [:index, :new, :create] 
 
-  # def sign_in
-  #   @title = "Accounts Sign In"
-  # end
 
   def index
-    @giftees = Giftee.all
+    @giftees = @current_user.giftees
     @title = "My Giftees"
   end
 
@@ -22,8 +21,10 @@ class GifteesController < ApplicationController
   end
 
   def create
-    Giftee.create(giftee_params[:giftee])
-    redirect_to "/giftees"
+    giftee = Giftee.create(giftee_params[:giftee])
+    giftee.user_id = session[:user_id]
+    giftee.save
+    redirect_to user_path(@current_user)
   end
 
   def edit
@@ -50,4 +51,12 @@ class GifteesController < ApplicationController
   def giftee_params
     params.permit(giftee:[:name, :age, :likes, :dislikes])
   end
+
+  def only_owner
+      if !@current_user || @current_user.id != Giftee.find(params[:id]).user_id
+        flash[:error] = "You are not authorized to view that section"
+        redirect_to root_path
+      end
+  end
+
 end
