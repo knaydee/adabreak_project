@@ -6,7 +6,7 @@ class GifteesController < ApplicationController
 
   def index
     @giftees = Giftee.all
-    @title = "My Giftees"
+    @title = "Giftee Profiles"
   end
 
   def show
@@ -19,7 +19,7 @@ class GifteesController < ApplicationController
   def new
     @giftee = Giftee.new()
     @action = "create"
-    @title = "Add Giftee"
+    @title = "Add a New Giftee"
   end
 
   def create

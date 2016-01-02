@@ -27,6 +27,10 @@ h1 {
   font-family: 'Lobster Two', cursive;
 }
 
+.people {
+  color: white;
+}
+
 body {
   /*background-image: url("background.jpg");
   background-repeat: no-repeat;
@@ -53,12 +57,17 @@ nav {
   color: white;
 }
 
+.giftee-list {
+  color: white;
+}
+
 .giftee-form, .wishlist-form {
   width: 300px;
   margin: auto;
   font-size: 25px;
   margin-top: -40px;
   color: white;
+  padding: 50px;
 }
 
 .form-group {
@@ -86,15 +95,15 @@ td {
 .btn {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #006400;
+  background-color: ##a6a6a6;
   display: block;
   margin: auto;
-  color: white;
+  color: black;
   width: 150px;
 }
 
 .btn:hover {
-  background-color: #95D1C5;
+  background-color: ##333333;
 }
 
 .button_to {
@@ -109,11 +118,11 @@ td {
 
 a:link {
     text-decoration: none;
-    color: white;
+
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 a.btn {
@@ -121,7 +130,7 @@ a.btn {
 }
 
 .control-label {
-  color: black;
+  color: white;
   font-size: 16px;
 }
 
