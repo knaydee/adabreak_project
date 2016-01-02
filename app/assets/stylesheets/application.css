@@ -47,9 +47,16 @@ html {
   background-size: cover;
 }
 
+
+nav {
+  /*margin-top: 50px;*/
+  color: white;
+}
+
 .giftee-form, .wishlist-form {
   width: 300px;
   margin: auto;
+  font-size: 25px;
   margin-top: -40px;
   color: white;
 }
@@ -82,7 +89,7 @@ td {
   background-color: #006400;
   display: block;
   margin: auto;
-  color: black;
+  color: white;
   width: 150px;
 }
 
@@ -98,6 +105,11 @@ td {
 
 .giftee-list {
   padding-bottom: 10px;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
 }
 
 a {
@@ -118,6 +130,10 @@ th {
   font-size: 18px;
 }
 
+tbody {
+  font-size: 25px;
+}
+
 #wishlist_bought {
   margin-left: 75px;
   color: black;
@@ -128,11 +144,6 @@ th {
   font-size: 18px;
 }
 
-nav {
-  margin-top: 50px;
-  color: white;
-}
-
 .home {
   color: white;
 }
@@ -141,12 +152,8 @@ span {
   font-size: 25px;
 }
 
-a:link {
-    text-decoration: none;
-}
 
 header {
-  color: white;
   font-size: 100px;
   text-align: left;
   padding-left: 50px;

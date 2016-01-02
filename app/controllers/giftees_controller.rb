@@ -13,6 +13,7 @@ class GifteesController < ApplicationController
     id = params[:id]
     @giftee = Giftee.find(id)
     @title = "#{@giftee.name}'s Info"
+    @name = @giftee.name
   end
 
   def new
