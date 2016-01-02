@@ -3,7 +3,6 @@
   <head>
     <title>Giftees</title>
     <link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -16,6 +15,15 @@
     <header>
       <nav><%= link_to "Giftees", root_path %> <span class="header-description">A Whimsical Wishlist Website</span></nav>
     </header>
+    <% if !flash.empty? %>
+      <div class="flash">
+        <% flash.each do |key, value| %><%= value %>
+        <% end %>
+      </div>
+    <% end %>
     <%= yield %>
+    <nav>
+     <%= link_to 'Home', root_path %>
+    </nav>
   </body>
 </html>

@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'giftees#index'
+  root 'welcome#index'
 
   resources :giftees do
     resources :wishlists
   end
+
+  resources :users
+  resources :sessions, :only => [:new, :create]
+
+  get '/sessions/new' => 'sessions#new', as: :login
+  delete '/logout' => 'sessions#destroy', as: :logout
+  get '/users/new' => 'users#new', as: :signup
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
