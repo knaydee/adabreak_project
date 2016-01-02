@@ -32,13 +32,19 @@ h1 {
 }
 
 body {
+  /*background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: 950px, 950px;
+  background-attachment: fixed;*/
   color: #EBEBEB;
+  /*background-position: center;*/
+  /*margin-top: 100px;*/
   background: none;
 }
 
 html {
   text-align: center;
-  background: url(red-scroll-background.jpg) no-repeat center center fixed;
+  background: url("red-scroll-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
