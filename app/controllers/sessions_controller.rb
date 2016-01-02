@@ -4,12 +4,12 @@ class SessionsController < ApplicationController
 
   def create
     data = params[:session_data]
-    @user = User.find_by_email_address(data[:email_address])
+    @user = User.find_by_email(data[:email])
 
     if !@user.nil?
       if @user.authenticate(data[:password])
         session[:user_id] = @user.id
-        flash[:notice] = "Welcome, #{@user.username}!"
+        flash[:notice] = "Welcome, #{@user.name}!"
         redirect_to root_path
       else
         flash.now[:error] = "Your email was not found or password did not match. Please try again."
@@ -30,6 +30,6 @@ class SessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:user).permit(:username, :email_address, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
