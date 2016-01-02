@@ -22,7 +22,14 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session[:user_id] = nil if session[:user_id]
+    flash[:notice] = "You have been logged out."
     redirect_to root_path
+  end
+
+  private
+
+  def session_params
+    params.require(:user).permit(:username, :email_address, :password, :password_confirmation)
   end
 end
