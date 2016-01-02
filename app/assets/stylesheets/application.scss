@@ -14,9 +14,9 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+// @import "font-awesome";
 
 
  * {
@@ -97,7 +97,7 @@ td {
 }
 
 .btn:hover {
-  background-color: ##333333;
+  background-color: #333333;
 }
 
 .button_to {
