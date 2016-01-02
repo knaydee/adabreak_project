@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       if @user.authenticate(data[:password])
         session[:user_id] = @user.id
         flash[:notice] = "Welcome, #{@user.name}!"
-        redirect_to root_path
+        redirect_to user_path(@user)
       else
         flash.now[:error] = "Your email was not found or password did not match. Please try again."
         render :new
