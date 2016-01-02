@@ -6,6 +6,11 @@ Rails.application.routes.draw do
     resources :wishlists
   end
 
+  resources :users
+
+  get 'sessions/new' => 'sessions#new', as: :login
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
