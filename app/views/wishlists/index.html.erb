@@ -26,10 +26,10 @@
           <% end %>
         </td>
         <td>
-          <%= button_to "Edit", { action: "edit", id: wishlist.id }, method: :get, class: "btn btn-default" %>
+          <%= button_to "Edit Item", { action: "edit", id: wishlist.id }, method: :get, class: "btn btn-default" %>
         </td>
         <td>
-          <%= button_to "Delete?", { action: "destroy", id: wishlist.id }, method: :delete, data: { confirm: "Last chance...you sure?" }, class: "btn btn-default" %>
+          <%= button_to "Delete Item", { action: "destroy", id: wishlist.id }, method: :delete, data: { confirm: "Last chance...you sure?" }, class: "btn btn-default" %>
         </td>
       </tr>
     <% end %>
