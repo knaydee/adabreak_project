@@ -1,4 +1,5 @@
 class WishlistsController < ApplicationController
+  before_action :only_owner
 
   def index
     id = params[:giftee_id]
@@ -51,6 +52,13 @@ class WishlistsController < ApplicationController
 
   def wishlist_params
     params.permit(wishlist:[:item, :price, :bought])
+  end
+
+  def only_owner
+      if !@current_user || @current_user.id != Giftee.find(params[:id]).user_id
+        flash[:error] = "You are not authorized to view that section"
+        redirect_to root_path
+      end
   end
 
 end
