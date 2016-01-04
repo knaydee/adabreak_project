@@ -1,0 +1,5 @@
+<h1>
+  <%= @user.name %>
+</h1>
+<%= button_to 'My Giftees', giftees_path, method: :get, class: 'btn btn-default' %>
+<%= button_to 'Add a Giftee', new_giftee_path, method: :get, class: 'btn btn-default' %>
